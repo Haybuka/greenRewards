@@ -29,7 +29,7 @@ const Login = () => {
           icon
         />
         <Checkbox />
-        <Button text="Continue" icon />
+        <Button type="submit" text="Continue" icon />
         <p>
           Don&apos;t have an account yet?{' '}
           <Link href={'/auth/register'} className="text-rewards-200">

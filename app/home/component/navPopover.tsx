@@ -1,6 +1,6 @@
 'use client';
 import { Popover, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 import { UserIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Fragment } from 'react';
@@ -41,11 +41,20 @@ export default function NavPopover() {
                 <span>
                   <UserIcon className="w-5 h-5 text-black" />
                 </span>
-                <ChevronDownIcon
-                  className={`${open ? '' : 'text-opacity-70'}
+
+                {!open ? (
+                  <ChevronDownIcon
+                    className={`${open ? '' : 'text-opacity-70'}
                   ml-2 h-5 w-5 transition text-black duration-150 ease-in-out group-hover:text-opacity-80`}
-                  aria-hidden="true"
-                />
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <ChevronUpIcon
+                    className={`${open ? '' : 'text-opacity-70'}
+                  ml-2 h-5 w-5 transition text-black duration-150 ease-in-out group-hover:text-opacity-80`}
+                    aria-hidden="true"
+                  />
+                )}
               </Popover.Button>
               <Transition
                 as={Fragment}

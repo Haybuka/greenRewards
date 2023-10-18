@@ -24,7 +24,7 @@ const RegisterPage = () => {
         <InputField
           name="email"
           placeholder="e.g devonlane@gmail.com"
-          type="email"
+          type="text"
         />
         <InputField
           name="password"
@@ -33,7 +33,7 @@ const RegisterPage = () => {
           icon
         />
         <Checkbox />
-        <Button text="Continue" icon />
+        <Button type="submit" text="Continue" icon />
         <p>
           Already have an account?{' '}
           <Link href={'/auth/login'} className="text-rewards-200">

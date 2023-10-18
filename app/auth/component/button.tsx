@@ -20,7 +20,7 @@ const Button = ({
   icon,
   handleClick,
   className = 'text-white',
-  type,
+  type = 'button',
 }: Props) => {
   return (
     <button

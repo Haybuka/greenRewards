@@ -14,7 +14,7 @@ const titilium = Titillium_Web({ subsets: ['latin'], weight: '700' });
 
 const Login = () => {
   return (
-    <aside className="p-6 lg:p-0">
+    <aside className="p-3 lg:p-0">
       <Header text="Welcome back GreenHero" />
       <form className="lg:w-[480px]">
         <InputField

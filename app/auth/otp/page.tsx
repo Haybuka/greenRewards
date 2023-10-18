@@ -1,23 +1,29 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import cls from 'classnames';
+
 import Header from '../component/header';
 import Button from '../component/button';
 import Link from 'next/link';
 import Otp from '../component/otpInput';
 import AuthModal from '../component/modal';
-import { useState } from 'react';
 import ModalCheck from '../component/modalCheck';
+import { Titillium_Web } from 'next/font/google';
+
+const titilium = Titillium_Web({ subsets: ['latin'], weight: ['400', '700'] });
 
 const OtpPage = () => {
   const [visible, setVisible] = useState(false);
-
+  const routes = useRouter();
   const handleModalToggle = () => {
     setVisible((prev) => !prev);
   };
 
   return (
     <>
-      <aside className="p-6 lg:p-0 relative">
+      <aside className="p-3 lg:p-0 relative">
         <Header text="verify your account" />
         <form className="lg:w-[480px]">
           <p className=" text-rewards-black">
@@ -48,12 +54,23 @@ const OtpPage = () => {
           x
         </div>
         <section className="text-center text-white">
-          <h3 className="my-4 text-[40px]">Registration sucessful</h3>
+          <h3
+            className={cls(
+              titilium.className,
+              'my-4 text-2xl md:text-[40px] font-bold'
+            )}
+          >
+            Registration successful
+          </h3>
           <p className="my-4">Connecting your wallet</p>
-          <ModalCheck />
+          <section className="h-[150px] w-[150px] mx-auto my-4">
+            <ModalCheck />
+          </section>
           <Button
             text="connect wallet"
+            type="button"
             className=" bg-white text-rewards-black"
+            handleClick={() => routes.push('/home')}
           />
         </section>
       </AuthModal>

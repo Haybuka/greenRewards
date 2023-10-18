@@ -17,7 +17,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <aside className="p-6 lg:p-0">
+    <aside className="p-3 lg:p-0">
       <Header text="create your account" />
       <form className="lg:w-[480px]" onSubmit={handleSubmit}>
         <InputField name="name" placeholder="e.g Devon Lane" type="text" />

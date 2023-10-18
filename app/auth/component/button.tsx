@@ -2,6 +2,7 @@
 import { Open_Sans } from 'next/font/google';
 import cls from 'classnames';
 import Image from 'next/image';
+import ChevronArrow from './chevronArrow';
 
 const sans = Open_Sans({ subsets: ['latin'], weight: '600' });
 
@@ -22,8 +23,8 @@ const Button = ({ text, icon, handleClick }: Props) => {
     >
       <span>{text}</span>
       {icon && (
-        <p className="mx-3">
-          <Image src={'/ArrowRight.svg'} height={14} width={20} alt="" />
+        <p className="mx-3 ">
+          <ChevronArrow color="white" />
         </p>
       )}
     </button>

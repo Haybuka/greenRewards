@@ -6,13 +6,14 @@ import Checkbox from '../component/checkbox';
 import Button from '../component/button';
 import Link from 'next/link';
 import Header from '../component/header';
+import ChevronArrow from '../component/chevronArrow';
 
 const sans = Open_Sans({ subsets: ['latin'], weight: '400' });
 const titilium = Titillium_Web({ subsets: ['latin'], weight: '700' });
 
 const RegisterPage = () => {
   return (
-    <aside className="p-6 lg:p-0">
+    <aside className="p-6 lg:p-0 relative">
       <Header text="create your account" />
       <form className="lg:w-[480px]">
         <InputField name="name" placeholder="e.g Devon Lane" type="text" />

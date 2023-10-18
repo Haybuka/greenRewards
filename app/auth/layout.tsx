@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import { Odor_Mean_Chey, Titillium_Web } from 'next/font/google';
 import cls from 'classnames';
 import styles from './layout.module.css';
+import ChevronArrow from './component/chevronArrow';
 
 const odor = Odor_Mean_Chey({ subsets: ['latin'], weight: '400' });
 const titilium = Titillium_Web({ subsets: ['latin'], weight: '400' });
@@ -13,7 +14,7 @@ type Prop = {
 
 const AuthLayout = ({ children }: Prop) => {
   return (
-    <main className="flex h-screen w-screen bg-white">
+    <main className="flex h-screen w-screen bg-white relative">
       <section className="w-full lg:w-3/4 h-full flex justify-center items-center ">
         {children}
       </section>
@@ -45,6 +46,9 @@ const AuthLayout = ({ children }: Prop) => {
           </div>
         </aside>
       </section>
+      <p className="absolute -scale-100 top-6 left-6 lg:top-10 lg:left-10 cursor-pointer">
+        <ChevronArrow color="#000" />
+      </p>
     </main>
   );
 };

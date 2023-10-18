@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { Odor_Mean_Chey } from 'next/font/google';
 
 interface Props {
   children: ReactNode;

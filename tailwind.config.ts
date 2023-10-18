@@ -16,6 +16,9 @@ const config: Config = {
       colors: {
         rewards: {
           DEFAULT: '#2B452B',
+          black: '#0F160F',
+          100: '#427142',
+          200: '#015C28',
         },
       },
     },

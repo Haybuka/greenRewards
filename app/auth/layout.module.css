@@ -1,0 +1,7 @@
+.aside {
+  @apply rounded-xl bg-rewards h-full px-6 py-16 relative flex flex-col justify-between;
+  background-image: url('/bg_mask.svg');
+  background-position: bottom left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

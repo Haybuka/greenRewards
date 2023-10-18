@@ -1,21 +1,25 @@
-import { Titillium_Web, Open_Sans } from 'next/font/google';
-import cls from 'classnames';
-import Image from 'next/image';
+'use client';
+
+import Link from 'next/link';
+import { FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
+
 import InputField from '../component/input';
 import Checkbox from '../component/checkbox';
 import Button from '../component/button';
-import Link from 'next/link';
 import Header from '../component/header';
-import ChevronArrow from '../component/chevronArrow';
-
-const sans = Open_Sans({ subsets: ['latin'], weight: '400' });
-const titilium = Titillium_Web({ subsets: ['latin'], weight: '700' });
-
 const RegisterPage = () => {
+  const route = useRouter();
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    route.push('/auth/otp');
+  };
+
   return (
-    <aside className="p-6 lg:p-0 relative">
+    <aside className="p-6 lg:p-0">
       <Header text="create your account" />
-      <form className="lg:w-[480px]">
+      <form className="lg:w-[480px]" onSubmit={handleSubmit}>
         <InputField name="name" placeholder="e.g Devon Lane" type="text" />
         <InputField
           name="email"

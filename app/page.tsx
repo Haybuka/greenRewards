@@ -8,9 +8,5 @@ export default function Home() {
   useLayoutEffect(() => {
     router.push('/home');
   }, []);
-  return (
-    <main className="">
-      <h3>Hello world</h3>
-    </main>
-  );
+  return <main className=""></main>;
 }
